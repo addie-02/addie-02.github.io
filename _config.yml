@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-UK"
-site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Addie Baker"
 title_separator          : "-"
 name                     : &name "Addie Baker"
@@ -29,7 +29,8 @@ author:
   bio              : "Short biography for the left-hand sidebar"
   location         : "United Kingdom"
   employer         : "University of Bath"
-  uri              : "https://drive.google.com/drive/u/0/folders/1A_bWLimbwzZoQe7_k6dvB2o8eRqiZ_98"
+  uri              : "https://linktr.ee/phdyourway"
+  uri              : "https://linktr.ee/behindtheresearch"
   email            : "ab3435@bath.ac.uk" 
 
   # Academic websites
