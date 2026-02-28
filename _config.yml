@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-UK"
-site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Addie Baker"
 title_separator          : "-"
 name                     : &name "Addie Baker"
@@ -25,8 +25,8 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Addie Baker"
-  pronouns         : "they/them"  
-  bio              : "Short biography for the left-hand sidebar"
+  pronouns         : "They/Them"  
+  bio              : "PhD Student in Mathematical Biology, and Maths Communicator"
   location         : "United Kingdom"
   employer         : "University of Bath"
   uri              : "https://linktr.ee/phdyourway"
@@ -36,13 +36,13 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : # "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : # "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
