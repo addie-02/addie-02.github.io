@@ -23,7 +23,7 @@ repository               : "addie-02/addie-02.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "headshot.JPG"
   name             : "Addie Baker"
   pronouns         : "They/Them"  
   bio              : "PhD Student in Mathematical Biology, and Maths Communicator"
