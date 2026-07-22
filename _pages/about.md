@@ -17,4 +17,5 @@ Alongside my research, I am involved in STEM outreach through [Behind The Resear
 - [Teaching](/teaching/) — teaching experience
 - [Talks](/talks/) — conference presentations and invited talks
 - [BLog Posts](/posts/) — posts from the various accounts I manage
+
 Get in touch at [ab3435@bath.ac.uk](mailto:ab3435@bath.ac.uk), or via the links in the sidebar.
