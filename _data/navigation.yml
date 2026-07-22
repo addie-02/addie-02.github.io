@@ -9,14 +9,15 @@
 
 main:
   - title: "Research"
-    url: /research.md
+    url: /research/
     
   - title: "Teaching"
-    url: /teaching.md
+    url: /teaching/
     
   - title: "Talks"
-    url: /talks.md
+    url: /talks/
 
   - title: "Blog Posts"
-    url: /blog posts.md
+    url: /posts/
+  
     
