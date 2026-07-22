@@ -35,9 +35,9 @@ author:
   employer         : "University of Bath"
   email            : "ab3435@bath.ac.uk"
   custom_link1_url   : "https://instagram.com/phdyourway"
-  custom_link1_label : "PhD Your Way"
+  custom_link1_label : "PhDYourWay"
   custom_link2_url   : "https://linktr.ee/behindtheresearch"
-  custom_link2_label : "Linktree"
+  custom_link2_label : "BehindTheResearch"
 
   # Academic websites
   academia         : # URL
