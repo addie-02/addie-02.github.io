@@ -8,14 +8,14 @@ permalink: /research/
 
 <div class="project-entry">
   <h3>Bee Foraging Agent-Based Model</h3>
-  <img src="{{ site.baseurl }}/images/projects/bee-abm-plot.png" alt="Bee ABM simulation output" style="max-width:100%; border-radius: 8px;">
+  <img src="{{ site.baseurl }}/images/projects/bee_abm_animation_orchard.gif" alt="Bee ABM simulation output" style="max-width:100%; border-radius: 8px;">
   <p>A lattice-based agent-based model of bee foraging behaviour, incorporating flower pollination dynamics, waggle-dance-style recruitment, and Q-learning for adaptive foraging strategy. Implemented in Python.</p>
   <p><a href="https://github.com/addie-02/A-Bee_M" target="_blank">View repository →</a></p>
 </div>
 
 <div class="project-entry">
   <h3>National Grid: Function-on-Function Electricity Demand Forecasting</h3>
-  <img src="{{ site.baseurl }}/images/projects/fda-demand-plot.png" alt="FDA electricity demand forecast" style="max-width:100%; border-radius: 8px;">
+  <img src="{{ site.baseurl }}/images/projects/derby_predictions-21.pdf" alt="FDA electricity demand forecast" style="max-width:100%; border-radius: 8px;">
   <p>SAMBa ITT24 project modelling UK electricity demand via function-on-function regression (<code>pffr()</code>, R), with functional covariates for lagged demand, temperature, wind speed, and activity profiles across five UK cities. Post-modelling analysis included FPCA and covariance surface visualisation.</p>
   <p><a href="https://github.com/addie-02/ITT24-FDA-NGED" target="_blank">View repository →</a></p>
 </div>
