@@ -1,0 +1,68 @@
+.theorem-box, .definition-box, .example-box, .remark-box {
+  border-left: 4px solid;
+  border-radius: $border-radius;
+  padding: 1em 1.25em;
+  margin: 1.5em 0;
+  background: var(--global-bg-color);
+}
+
+.theorem-box    { border-color: $info-color; }
+.definition-box { border-color: $success-color; }
+.example-box    { border-color: $warning-color; }
+.remark-box     { border-color: $notice-color; }
+
+.theorem-box .box-title, .definition-box .box-title,
+.example-box .box-title, .remark-box .box-title {
+  font-family: $header-font-family;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+details.dropdown-box {
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+}
+
+details.dropdown-box summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: $primary-color;
+}
+
+details.dropdown-box[open] summary {
+  margin-bottom: 0.75em;
+}
+
+.project-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+  margin: 2.5em 0;
+
+  @include breakpoint(max-width $medium) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.project-media {
+  flex: 0 0 40%;
+
+  img {
+    width: 100%;
+    border-radius: $border-radius;
+    display: block;
+  }
+}
+
+.project-text {
+  flex: 1 1 auto;
+
+  h3 {
+    margin-top: 0;
+  }
+}
