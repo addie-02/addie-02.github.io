@@ -19,7 +19,7 @@ permalink: /research/
 
 <div class="project-entry">
   <div class="project-media">
-    <img src="{{ site.baseurl }}/images/projects/predictions.jpg" alt="FDA electricity demand forecast">
+    <img src="{{ site.baseurl }}/images/projects/predictions.gif" alt="FDA electricity demand forecast">
   </div>
   <div class="project-text">
     <h3>National Grid: Function-on-Function Electricity Demand Forecasting (WIP)</h3>
