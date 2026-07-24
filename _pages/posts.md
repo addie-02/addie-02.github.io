@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "Social Media"
 layout: archive
 permalink: /posts/
 ---
