@@ -29,7 +29,12 @@ which is exactly the slope of the straight line (the secant) joining the two poi
 <div class="figure-with-text">
   <img src="{{ site.baseurl }}/images/lessons/fig1.svg" alt="Diagram showing nested large and small Delta x secant triangles converging toward the tangent line">
   <div class="figure-explanation">
-    <p>The larger triangle shows a secant line over a wide interval $\Delta x_{\text{large}}$ — its slope is only a rough approximation to the instantaneous rate of change at $x_0$. The smaller triangle, centred within the same interval, uses a much narrower $\Delta x_{\text{small}}$: its secant slope sits closer to the true tangent slope $f'(x_0)$. As $\Delta x \to 0$, this nested construction continues indefinitely, and the secant slope converges to the derivative.</p>
+    <p>
+      The <span style="color:#fe6100;">orange secant line</span> spans a wide interval, $\Delta x_{\text{large}}$ (marked in <span style="color:#648fff;">blue</span>), giving only a rough approximation to the rate of change at $x_0$. The <span style="color:#dc267f;">pink secant line</span>, centred within the same span, uses a much narrower $\Delta x_{\text{small}}$: its slope sits closer to the true instantaneous rate. In both cases, the corresponding rise is marked in <span style="color:#24a148;">green</span> as $\Delta y$.
+    </p>
+    <p>
+      As the interval shrinks further, the <span style="color:#dc267f;">pink secant</span> converges toward the tangent line at $x_0$, and the ratio $\Delta y / \Delta x$ converges toward the derivative $f'(x_0)$ — the limiting process stated formally in Definition 1.1.
+    </p>
   </div>
 </div>
 
