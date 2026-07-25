@@ -51,23 +51,22 @@ This is the same object introduced formally in Definition 1.1 below, with $h$ us
 Intuitively, the derivative asks: *if I nudge $x$ by a tiny amount, how much does $f(x)$ change, per unit of nudge?* Definition 1.1 makes this precise by taking that nudge, $h$, to zero.
 
 <div class="definition-box" markdown="1">
-  <span class="box-title">Definition 1.1 (Derivative)</span>
-  Let $f: \mathbb{R} \to \mathbb{R}$. The derivative of $f$ at $x$ is
+<span class="box-title">Definition 1.1 (Derivative)</span>
+Let $f: \mathbb{R} \to \mathbb{R}$. The derivative of $f$ at $x$ is
 
-  $$
-  \begin{equation}
-  f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
-  \label{eq:derivative-def}
-  \end{equation}
-  $$
+$$
+\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\label{eq:derivative-def}
+\end{equation}
+$$
 
-  provided this limit exists. If it does, $f$ is said to be **differentiable** at $x$.
+provided this limit exists. If it does, $f$ is said to be **differentiable** at $x$.
 
-  <details class="dropdown-box" markdown="1">
-    <summary>Quick numeric check</summary>
-    For $f(x) = x^2$ at $x=2$: taking $h = 0.1, 0.01, 0.001$ gives $\frac{f(2+h)-f(2)}{h} = 4.1, 4.01, 4.001$ — approaching $4$, matching $f'(2)=4$ from the power rule.
-  </details>
-
+<details class="dropdown-box" markdown="1">
+<summary>Quick numeric check</summary>
+For $f(x) = x^2$ at $x=2$: taking $h = 0.1, 0.01, 0.001$ gives $\frac{f(2+h)-f(2)}{h} = 4.1, 4.01, 4.001$ — approaching $4$, matching $f'(2)=4$ from the power rule.
+</details>
 </div>
 
 <div class="remark-box" markdown="1">
