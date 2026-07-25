@@ -65,8 +65,9 @@ Intuitively, the derivative asks: *if I nudge $x$ by a tiny amount, how much doe
 
   <details class="dropdown-box" markdown="1">
     <summary>Quick numeric check</summary>
-    For $f(x) = x^2$ at $x=2$: taking $h = 0.1, 0.01, 0.001$ gives $\frac{f(2+h)-f(2)}{h} = 4.1, 4.01, 4.001$ — approaching $4$, matching $f'(2) = 2(2) = 4$ from the power rule below.
+    For $f(x) = x^2$ at $x=2$: taking $h = 0.1, 0.01, 0.001$ gives $\frac{f(2+h)-f(2)}{h} = 4.1, 4.01, 4.001$ — approaching $4$, matching $f'(2)=4$ from the power rule.
   </details>
+
 </div>
 
 <div class="remark-box" markdown="1">
@@ -85,83 +86,114 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
 
 ## 4. Basic differentiation rules
 
-These four rules let you differentiate almost any function built from simpler pieces, without returning to Definition 1.1 each time.
-
 <div class="theorem-box" markdown="1">
-  <span class="box-title">Theorem 1.2 (Linearity)</span>
-  Scaling or adding functions scales or adds their derivatives — differentiation doesn't "mix" terms.
+<span class="box-title">Theorem 1.2 (Linearity)</span>
 
-  $$
-  \begin{equation}
-  \frac{d}{dx}\left[a f(x) + b g(x)\right] = a f'(x) + b g'(x)
-  \label{eq:linearity}
-  \end{equation}
-  $$
+$$
+\begin{equation}
+\frac{d}{dx}\left[a f(x) + b g(x)\right] = a f'(x) + b g'(x)
+\label{eq:linearity}
+\end{equation}
+$$
+
+Scaling or adding functions scales or adds their derivatives — differentiation doesn't "mix" terms together.
 </div>
 
 <div class="theorem-box" markdown="1">
-  <span class="box-title">Theorem 1.3 (Product Rule)</span>
-  For a product, each factor is differentiated in turn, with the other held fixed.
+<span class="box-title">Theorem 1.3 (Product Rule)</span>
 
-  $$
-  \begin{equation}
-  \frac{d}{dx}\left[f(x)g(x)\right] = f'(x)g(x) + f(x)g'(x)
-  \label{eq:product-rule}
-  \end{equation}
-  $$
+$$
+\begin{equation}
+\frac{d}{dx}\left[f(x)g(x)\right] = f'(x)g(x) + f(x)g'(x)
+\label{eq:product-rule}
+\end{equation}
+$$
+
+Each factor is differentiated in turn, with the other held fixed — you can't simply multiply $f'(x)$ and $g'(x)$ together.
 </div>
 
 <div class="theorem-box" markdown="1">
-  <span class="box-title">Theorem 1.4 (Quotient Rule)</span>
-  A special case of the product rule applied to $f(x) \cdot g(x)^{-1}$.
+<span class="box-title">Theorem 1.4 (Quotient Rule)</span>
 
-  $$
-  \begin{equation}
-  \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}, \quad g(x) \neq 0
-  \label{eq:quotient-rule}
-  \end{equation}
-  $$
+$$
+\begin{equation}
+\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}, \quad g(x) \neq 0
+\label{eq:quotient-rule}
+\end{equation}
+$$
+
+This is a special case of the product rule applied to $f(x)\cdot g(x)^{-1}$; the $g(x)^2$ in the denominator comes from differentiating that inverse.
 </div>
 
 <div class="theorem-box" markdown="1">
-  <span class="box-title">Theorem 1.5 (Chain Rule)</span>
-  For a composition, multiply the outer function's derivative by the inner function's derivative — rates of change compound.
+<span class="box-title">Theorem 1.5 (Chain Rule)</span>
 
-  $$
-  \begin{equation}
-  h'(x) = f'(g(x)) \, g'(x), \quad \text{where } h(x) = f(g(x))
-  \label{eq:chain-rule}
-  \end{equation}
-  $$
+$$
+\begin{equation}
+h'(x) = f'(g(x)) \, g'(x), \quad \text{where } h(x) = f(g(x))
+\label{eq:chain-rule}
+\end{equation}
+$$
+
+For a composition of functions, rates of change compound: multiply the outer function's derivative (evaluated at the inner function) by the inner function's own derivative.
+</div>
+
+<div class="remark-box" markdown="1">
+  <span class="box-title">Remark</span>
+  All rules stated here extend naturally to compositions — e.g. combining the chain rule with the standard derivatives table lets you differentiate expressions like $e^{\sin x}$ or $\ln(x^2 + 1)$ without returning to first principles each time.
 </div>
 
 ## 5. Standard derivatives
 
 <div class="theorem-box" markdown="1">
-  <span class="box-title">Theorem 1.6 (Power Rule)</span>
+<span class="box-title">Theorem 1.6 (Power Rule)</span>
 
-  $$
-  \begin{equation}
-  f'(x) = n x^{n-1}, \quad f(x) = x^n,\ n \in \mathbb{R}
-  \label{eq:power-rule}
-  \end{equation}
-  $$
+$$
+\begin{equation}
+f'(x) = n x^{n-1}, \quad f(x) = x^n,\ n \in \mathbb{R}
+\label{eq:power-rule}
+\end{equation}
+$$
+
+Includes constants ($n=0$), reciprocals ($n=-1$), and roots ($n=\tfrac{1}{2}$) as special cases.
 </div>
 
-The results below follow from first principles or the rules above, and cover the functions you'll differentiate most often:
+<div class="remark-box" markdown="1">
+<span class="box-title">Remark</span>
+Theorem 1.6 covers several familiar cases as $n$ varies: a constant $f(x) = c = c \cdot x^0$ gives $f'(x) = 0$; a negative power such as $f(x) = x^{-1} = \tfrac{1}{x}$ gives $f'(x) = -x^{-2} = -\tfrac{1}{x^2}$; and a fractional power such as $f(x) = x^{1/2} = \sqrt{x}$ gives $f'(x) = \tfrac{1}{2}x^{-1/2} = \tfrac{1}{2\sqrt{x}}$.
+</div>
 
-| $f(x)$ | $f'(x)$ |
-|---|---|
-| $c$ (constant) | $0$ |
-| $x^n$ | $nx^{n-1}$ |
-| $e^x$ | $e^x$ |
-| $a^x$, $a > 0$ | $a^x \ln a$ |
-| $\ln x$ | $\dfrac{1}{x}$ |
-| $\sin x$ | $\cos x$ |
-| $\cos x$ | $-\sin x$ |
-| $\tan x$ | $\sec^2 x$ |
-| $\sqrt{x}$ | $\dfrac{1}{2\sqrt{x}}$ |
-| $\dfrac{1}{x}$ | $-\dfrac{1}{x^2}$ |
+<div class="theorem-box" markdown="1">
+<span class="box-title">Theorem 1.7 (Exponential Derivatives)</span>
+
+$$
+\frac{d}{dx}e^{kx} = k e^{kx}, \qquad \frac{d}{dx}a^x = a^x \ln a, \quad a > 0
+$$
+
+Both follow from the chain rule: for $e^{kx}$, the outer function $e^{(\cdot)}$ is its own derivative, so only the inner factor $k$ is picked up. For $a^x$, rewriting as $e^{x \ln a}$ reduces it to the same case with $k = \ln a$.
+</div>
+
+<div class="theorem-box" markdown="1">
+<span class="box-title">Theorem 1.8 (Logarithmic Derivative)</span>
+
+$$
+\frac{d}{dx}\ln(kx) = \frac{1}{x}, \quad k > 0
+$$
+
+Although $k$ appears inside the logarithm, it cancels: $\ln(kx) = \ln k + \ln x$, and $\ln k$ is a constant with zero derivative — so the result doesn't actually depend on $k$.
+</div>
+
+<div class="theorem-box" markdown="1">
+<span class="box-title">Theorem 1.9 (Trigonometric Derivatives)</span>
+
+$$
+\frac{d}{dx}\sin(kx) = k\cos(kx), \qquad
+\frac{d}{dx}\cos(kx) = -k\sin(kx), \qquad
+\frac{d}{dx}\tan(kx) = k\sec^2(kx)
+$$
+
+As with $e^{kx}$, each is the base derivative (of $\sin x$, $\cos x$, $\tan x$) with an extra factor of $k$ from the chain rule, since the inner function $kx$ has derivative $k$.
+</div>
 
 ## 6. Worked examples
 
@@ -206,9 +238,4 @@ The results below follow from first principles or the rules above, and cover the
     <summary>Show step-by-step application</summary>
     Let $g(x) = x^2$ and $u = g(x)$, so $f(x) = \sin(u)$. Then $\dfrac{df}{du} = \cos(u)$ and $\dfrac{du}{dx} = 2x$. By \eqref{eq:chain-rule}, $f'(x) = \cos(u) \cdot 2x = \cos(x^2) \cdot 2x$.
   </details>
-</div>
-
-<div class="remark-box" markdown="1">
-  <span class="box-title">Remark</span>
-  All rules stated here extend naturally to compositions — e.g. combining the chain rule with the standard derivatives table lets you differentiate expressions like $e^{\sin x}$ or $\ln(x^2 + 1)$ without returning to first principles each time.
 </div>
