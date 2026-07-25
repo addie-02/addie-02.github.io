@@ -5,12 +5,14 @@ permalink: /lessons/derivatives/
 chapter: "1. Foundations of Calculus"
 chapter_order: 1
 lesson_order: 1
-excerpt: "Definitions, geometric interpretation, and basic differentiation rules."
+excerpt: "Definitions, geometric interpretation, and standard differentiation rules."
 ---
 
 ## 1. Motivation
 
 We want to formalise the notion of an *instantaneous rate of change* — how a function's output changes as its input changes at a single point, rather than over an interval.
+
+## 2. Definition
 
 <div class="definition-box">
   <span class="box-title">Definition 1.1 (Derivative)</span>
@@ -23,17 +25,70 @@ We want to formalise the notion of an *instantaneous rate of change* — how a f
   \end{equation}
   $$
 
-  provided this limit exists.
+  provided this limit exists. If it does, $f$ is said to be **differentiable** at $x$.
 </div>
 
-## 2. Geometric interpretation
+<div class="remark-box">
+  <span class="box-title">Remark</span>
+  Common notations for the derivative include $f'(x)$, $\dfrac{df}{dx}$, $\dfrac{dy}{dx}$ (if $y = f(x)$), and $\dot{f}$ (typically reserved for derivatives with respect to time).
+</div>
 
-The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** through $(x, f(x))$ and $(x+h, f(x+h))$. As $h \to 0$, the secant line converges to the **tangent line** at $x$.
+## 3. Geometric interpretation
 
-## 3. Basic differentiation rules
+The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** through $(x, f(x))$ and $(x+h, f(x+h))$. As $h \to 0$, the secant line converges to the **tangent line** at $x$, and $f'(x)$ is precisely that tangent's slope.
+
+## 4. Basic differentiation rules
 
 <div class="theorem-box">
-  <span class="box-title">Theorem 1.2 (Power Rule)</span>
+  <span class="box-title">Theorem 1.2 (Linearity)</span>
+  If $f$ and $g$ are differentiable and $a, b \in \mathbb{R}$,
+
+  $$
+  \begin{equation}
+  \frac{d}{dx}\left[a f(x) + b g(x)\right] = a f'(x) + b g'(x)
+  \label{eq:linearity}
+  \end{equation}
+  $$
+</div>
+
+<div class="theorem-box">
+  <span class="box-title">Theorem 1.3 (Product Rule)</span>
+
+  $$
+  \begin{equation}
+  \frac{d}{dx}\left[f(x)g(x)\right] = f'(x)g(x) + f(x)g'(x)
+  \label{eq:product-rule}
+  \end{equation}
+  $$
+</div>
+
+<div class="theorem-box">
+  <span class="box-title">Theorem 1.4 (Quotient Rule)</span>
+
+  $$
+  \begin{equation}
+  \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}, \quad g(x) \neq 0
+  \label{eq:quotient-rule}
+  \end{equation}
+  $$
+</div>
+
+<div class="theorem-box">
+  <span class="box-title">Theorem 1.5 (Chain Rule)</span>
+  If $h(x) = f(g(x))$,
+
+  $$
+  \begin{equation}
+  h'(x) = f'(g(x)) \, g'(x)
+  \label{eq:chain-rule}
+  \end{equation}
+  $$
+</div>
+
+## 5. Standard derivatives
+
+<div class="theorem-box">
+  <span class="box-title">Theorem 1.6 (Power Rule)</span>
   For $f(x) = x^n$, $n \in \mathbb{R}$,
 
   $$
@@ -44,8 +99,25 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
   $$
 </div>
 
+The following standard results follow from first principles or the rules above, and are used freely throughout subsequent lessons:
+
+| $f(x)$ | $f'(x)$ |
+|---|---|
+| $c$ (constant) | $0$ |
+| $x^n$ | $nx^{n-1}$ |
+| $e^x$ | $e^x$ |
+| $a^x$, $a > 0$ | $a^x \ln a$ |
+| $\ln x$ | $\dfrac{1}{x}$ |
+| $\sin x$ | $\cos x$ |
+| $\cos x$ | $-\sin x$ |
+| $\tan x$ | $\sec^2 x$ |
+| $\sqrt{x}$ | $\dfrac{1}{2\sqrt{x}}$ |
+| $\dfrac{1}{x}$ | $-\dfrac{1}{x^2}$ |
+
+## 6. Worked examples
+
 <div class="example-box">
-  <span class="box-title">Example 1.3</span>
+  <span class="box-title">Example 1.7</span>
   Let $f(x) = x^3$. By \eqref{eq:power-rule}, $f'(x) = 3x^2$.
 
   <details class="dropdown-box">
@@ -59,7 +131,35 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
   </details>
 </div>
 
+<div class="example-box">
+  <span class="box-title">Example 1.8</span>
+  Let $f(x) = x^2 \sin x$. By the product rule \eqref{eq:product-rule},
+
+  $$
+  f'(x) = 2x \sin x + x^2 \cos x
+  $$
+
+  <details class="dropdown-box">
+    <summary>Show step-by-step application</summary>
+    Identify $u(x) = x^2$, $v(x) = \sin x$, so $u'(x) = 2x$, $v'(x) = \cos x$. Substituting into \eqref{eq:product-rule} gives $f'(x) = u'v + uv' = 2x\sin x + x^2 \cos x$ directly.
+  </details>
+</div>
+
+<div class="example-box">
+  <span class="box-title">Example 1.9</span>
+  Let $f(x) = \sin(x^2)$. By the chain rule \eqref{eq:chain-rule} with outer function $\sin(\cdot)$ and inner function $x^2$,
+
+  $$
+  f'(x) = \cos(x^2) \cdot 2x
+  $$
+
+  <details class="dropdown-box">
+    <summary>Show step-by-step application</summary>
+    Let $g(x) = x^2$ and $u = g(x)$, so $f(x) = \sin(u)$. Then $\dfrac{df}{du} = \cos(u)$ and $\dfrac{du}{dx} = 2x$. By \eqref{eq:chain-rule}, $f'(x) = \cos(u) \cdot 2x = \cos(x^2) \cdot 2x$.
+  </details>
+</div>
+
 <div class="remark-box">
   <span class="box-title">Remark</span>
-  The power rule extends to negative and fractional exponents — e.g. $f(x) = x^{-1} \Rightarrow f'(x) = -x^{-2}$, and $f(x) = \sqrt{x} = x^{1/2} \Rightarrow f'(x) = \tfrac{1}{2}x^{-1/2}$.
+  All rules stated here extend naturally to compositions — e.g. combining the chain rule with the standard derivatives table lets you differentiate expressions like $e^{\sin x}$ or $\ln(x^2 + 1)$ without returning to first principles each time.
 </div>
