@@ -10,7 +10,31 @@ excerpt: "Definitions, geometric interpretation, and standard differentiation ru
 
 ## 1. Motivation
 
-We want to formalise the notion of an *instantaneous rate of change* — how a function's output changes as its input changes at a single point, rather than over an interval.
+Many quantities in mathematical biology change continuously — population density, drug concentration, resistant fraction — and we frequently want to know not just *how much* a quantity has changed, but *how fast* it is changing at a given instant.
+
+Consider a function $y = f(x)$. Over an interval from $x$ to $x + \Delta x$, the quantity changes by
+
+$$
+\Delta y = f(x + \Delta x) - f(x).
+$$
+
+The **average rate of change** over this interval is the ratio
+
+$$
+\frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x},
+$$
+
+which is exactly the slope of the straight line (the secant) joining the two points $(x, f(x))$ and $(x + \Delta x, f(x + \Delta x))$ on the curve.
+
+<img src="{{ site.baseurl }}/images/lessons/fig1.svg" alt="Diagram showing dy/dx as the limit of Delta y over Delta x as Delta x approaches zero" style="max-width:100%;">
+
+This average rate depends on the size of $\Delta x$ chosen — a wide interval can smooth over rapid local behaviour a narrower one would capture. To recover the *instantaneous* rate of change at the single point $x$, we shrink the interval, letting $\Delta x \to 0$. As this happens, the secant line rotates and settles into the **tangent line** at $x$, and the ratio $\Delta y / \Delta x$ settles into a single limiting value — the derivative:
+
+$$
+\frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}.
+$$
+
+This is the same object introduced formally in Definition 1.1 below, with $h$ used in place of $\Delta x$ — the notation $dy/dx$ (due to Leibniz) emphasises this limiting process explicitly, treating $dy$ and $dx$ as infinitesimal versions of $\Delta y$ and $\Delta x$.
 
 ## 2. Definition
 
