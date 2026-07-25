@@ -30,7 +30,7 @@ which is exactly the slope of the straight line (the secant) joining the two poi
   <img src="{{ site.baseurl }}/images/lessons/fig1.svg" alt="Diagram showing nested large and small Delta x secant triangles converging toward the tangent line">
   <div class="figure-explanation">
     <p>
-      The <span style="color:#fe6100;">orange secant line</span> spans a wide interval, $\Delta x_{\text{large}}$ (marked in <span style="color:#648fff;">blue</span>), giving only a rough approximation to the rate of change at $x_0$. The <span style="color:#dc267f;">pink secant line</span>, centred within the same span, uses a much narrower $\Delta x_{\text{small}}$: its slope sits closer to the true instantaneous rate. In both cases, the corresponding rise is marked in <span style="color:#24a148;">green</span> as $\Delta y$.
+      The <span style="color:#fe6100;">orange secant line</span> spans a wide interval, $\Delta x_{\text{large}}$ (marked in <span style="color:#648fff;">blue</span>), giving only a rough approximation to the rate of change at the midpoint of $x_0$ and $x_1$. The <span style="color:#dc267f;">pink secant line</span>, centred within the same span, uses a much narrower $\Delta x_{\text{small}}$: its slope sits closer to the true instantaneous rate. In both cases, the corresponding rise is marked in <span style="color:#24a148;">green</span> as $\Delta y$.
     </p>
     <p>
       As the interval shrinks further, the <span style="color:#dc267f;">pink secant</span> converges toward the tangent line at $x_0$, and the ratio $\Delta y / \Delta x$ converges toward the derivative $f'(x_0)$ — the limiting process stated formally in Definition 1.1.
