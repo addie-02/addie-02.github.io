@@ -1,3 +1,25 @@
+/* ==========================================================================
+   LESSON CONTENT BOXES
+   ========================================================================== */
+
+.theorem-box, .definition-box, .example-box, .remark-box, details.dropdown-box {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  mjx-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    display: block !important;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+
 .theorem-box, .definition-box, .example-box, .remark-box {
   border-left: 4px solid;
   border-radius: $border-radius;
@@ -19,20 +41,15 @@
   margin-bottom: 0.5em;
 }
 
+/* ==========================================================================
+   TOGGLABLE DROPDOWN BOXES
+   ========================================================================== */
+
 details.dropdown-box {
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   margin: 1em 0;
   padding: 0.5em 1em;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  mjx-container {
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 100%;
-    display: block !important;
-  }
 }
 
 details.dropdown-box summary {
@@ -45,6 +62,10 @@ details.dropdown-box[open] summary {
   margin-bottom: 0.75em;
 }
 
+/* ==========================================================================
+   PROJECT ENTRIES (media + text side-by-side)
+   ========================================================================== */
+
 .project-entry {
   display: flex;
   flex-direction: row;
@@ -55,6 +76,14 @@ details.dropdown-box[open] summary {
   @include breakpoint(max-width $medium) {
     flex-direction: column;
     align-items: stretch;
+  }
+}
+
+.project-entry.reverse {
+  flex-direction: row-reverse;
+
+  @include breakpoint(max-width $medium) {
+    flex-direction: column;
   }
 }
 
