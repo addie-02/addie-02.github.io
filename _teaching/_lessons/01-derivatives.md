@@ -1,7 +1,11 @@
 ---
-permalink: /teaching/lessons/derivatives/
-title: "Lesson 1: The Derivative"
-author_profile: true
+title: "The Derivative"
+collection: lessons
+permalink: /lessons/derivatives/
+chapter: "1. Foundations of Calculus"
+chapter_order: 1
+lesson_order: 1
+excerpt: "Definitions, geometric interpretation, and basic differentiation rules."
 ---
 
 ## 1. Motivation
