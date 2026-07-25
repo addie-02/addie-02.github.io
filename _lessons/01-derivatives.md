@@ -26,7 +26,12 @@ $$
 
 which is exactly the slope of the straight line (the secant) joining the two points $(x, f(x))$ and $(x + \Delta x, f(x + \Delta x))$ on the curve.
 
-<img src="{{ site.baseurl }}/images/lessons/fig1.svg" alt="Diagram showing dy/dx as the limit of Delta y over Delta x as Delta x approaches zero" style="max-width:100%;">
+<div class="figure-with-text">
+  <img src="{{ site.baseurl }}/images/lessons/fig1.svg" alt="Diagram showing nested large and small Delta x secant triangles converging toward the tangent line">
+  <div class="figure-explanation">
+    <p>The larger triangle shows a secant line over a wide interval $\Delta x_{\text{large}}$ — its slope is only a rough approximation to the instantaneous rate of change at $x_0$. The smaller triangle, centred within the same interval, uses a much narrower $\Delta x_{\text{small}}$: its secant slope sits closer to the true tangent slope $f'(x_0)$. As $\Delta x \to 0$, this nested construction continues indefinitely, and the secant slope converges to the derivative.</p>
+  </div>
+</div>
 
 This average rate depends on the size of $\Delta x$ chosen — a wide interval can smooth over rapid local behaviour a narrower one would capture. To recover the *instantaneous* rate of change at the single point $x$, we shrink the interval, letting $\Delta x \to 0$. As this happens, the secant line rotates and settles into the **tangent line** at $x$, and the ratio $\Delta y / \Delta x$ settles into a single limiting value — the derivative:
 
