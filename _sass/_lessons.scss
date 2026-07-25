@@ -6,12 +6,11 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
 
-  mjx-container {
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 100%;
-    display: block !important;
-  }
+  mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
 
   table {
     display: block;
