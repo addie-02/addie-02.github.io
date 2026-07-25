@@ -48,7 +48,7 @@ This is the same object introduced formally in Definition 1.1 below, with $h$ us
 
 ## 2. Definition
 
-<div class="definition-box">
+<div class="definition-box" markdown="1">
   <span class="box-title">Definition 1.1 (Derivative)</span>
   Let $f: \mathbb{R} \to \mathbb{R}$. The derivative of $f$ at $x$ is
 
@@ -62,7 +62,7 @@ This is the same object introduced formally in Definition 1.1 below, with $h$ us
   provided this limit exists. If it does, $f$ is said to be **differentiable** at $x$.
 </div>
 
-<div class="remark-box">
+<div class="remark-box" markdown="1">
   <span class="box-title">Remark</span>
   Common notations for the derivative include $f'(x)$, $\dfrac{df}{dx}$, $\dfrac{dy}{dx}$ (if $y = f(x)$), and $\dot{f}$ (typically reserved for derivatives with respect to time).
 </div>
@@ -73,7 +73,7 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
 
 ## 4. Basic differentiation rules
 
-<div class="theorem-box">
+<div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.2 (Linearity)</span>
   If $f$ and $g$ are differentiable and $a, b \in \mathbb{R}$,
 
@@ -85,7 +85,7 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
   $$
 </div>
 
-<div class="theorem-box">
+<div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.3 (Product Rule)</span>
 
   $$
@@ -96,7 +96,7 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
   $$
 </div>
 
-<div class="theorem-box">
+<div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.4 (Quotient Rule)</span>
 
   $$
@@ -107,7 +107,7 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
   $$
 </div>
 
-<div class="theorem-box">
+<div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.5 (Chain Rule)</span>
   If $h(x) = f(g(x))$,
 
@@ -121,7 +121,7 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
 
 ## 5. Standard derivatives
 
-<div class="theorem-box">
+<div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.6 (Power Rule)</span>
   For $f(x) = x^n$, $n \in \mathbb{R}$,
 
@@ -150,7 +150,7 @@ The following standard results follow from first principles or the rules above, 
 
 ## 6. Worked examples
 
-<div class="example-box">
+<div class="example-box" markdown="1">
   <span class="box-title">Example 1.7</span>
   Let $f(x) = x^3$. By \eqref{eq:power-rule}, $f'(x) = 3x^2$.
 
@@ -165,7 +165,7 @@ The following standard results follow from first principles or the rules above, 
   </details>
 </div>
 
-<div class="example-box">
+<div class="example-box" markdown="1">
   <span class="box-title">Example 1.8</span>
   Let $f(x) = x^2 \sin x$. By the product rule \eqref{eq:product-rule},
 
@@ -179,7 +179,7 @@ The following standard results follow from first principles or the rules above, 
   </details>
 </div>
 
-<div class="example-box">
+<div class="example-box" markdown="1">
   <span class="box-title">Example 1.9</span>
   Let $f(x) = \sin(x^2)$. By the chain rule \eqref{eq:chain-rule} with outer function $\sin(\cdot)$ and inner function $x^2$,
 
@@ -193,7 +193,7 @@ The following standard results follow from first principles or the rules above, 
   </details>
 </div>
 
-<div class="remark-box">
+<div class="remark-box" markdown="1">
   <span class="box-title">Remark</span>
   All rules stated here extend naturally to compositions — e.g. combining the chain rule with the standard derivatives table lets you differentiate expressions like $e^{\sin x}$ or $\ln(x^2 + 1)$ without returning to first principles each time.
 </div>
