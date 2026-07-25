@@ -48,6 +48,8 @@ This is the same object introduced formally in Definition 1.1 below, with $h$ us
 
 ## 2. Definition
 
+Intuitively, the derivative asks: *if I nudge $x$ by a tiny amount, how much does $f(x)$ change, per unit of nudge?* Definition 1.1 makes this precise by taking that nudge, $h$, to zero.
+
 <div class="definition-box" markdown="1">
   <span class="box-title">Definition 1.1 (Derivative)</span>
   Let $f: \mathbb{R} \to \mathbb{R}$. The derivative of $f$ at $x$ is
@@ -60,6 +62,11 @@ This is the same object introduced formally in Definition 1.1 below, with $h$ us
   $$
 
   provided this limit exists. If it does, $f$ is said to be **differentiable** at $x$.
+
+  <details class="dropdown-box" markdown="1">
+    <summary>Quick numeric check</summary>
+    For $f(x) = x^2$ at $x=2$: taking $h = 0.1, 0.01, 0.001$ gives $\frac{f(2+h)-f(2)}{h} = 4.1, 4.01, 4.001$ — approaching $4$, matching $f'(2) = 2(2) = 4$ from the power rule below.
+  </details>
 </div>
 
 <div class="remark-box" markdown="1">
@@ -71,11 +78,18 @@ This is the same object introduced formally in Definition 1.1 below, with $h$ us
 
 The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** through $(x, f(x))$ and $(x+h, f(x+h))$. As $h \to 0$, the secant line converges to the **tangent line** at $x$, and $f'(x)$ is precisely that tangent's slope.
 
+<div class="remark-box" markdown="1">
+  <span class="box-title">Remark: when differentiability fails</span>
+  The limit in \eqref{eq:derivative-def} must give the *same* value whether $h \to 0$ from above or below. At a sharp corner (e.g. $f(x) = |x|$ at $x=0$), the left and right limits disagree, so no single tangent slope exists — $f$ is continuous there but not differentiable.
+</div>
+
 ## 4. Basic differentiation rules
+
+These four rules let you differentiate almost any function built from simpler pieces, without returning to Definition 1.1 each time.
 
 <div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.2 (Linearity)</span>
-  If $f$ and $g$ are differentiable and $a, b \in \mathbb{R}$,
+  Scaling or adding functions scales or adds their derivatives — differentiation doesn't "mix" terms.
 
   $$
   \begin{equation}
@@ -87,6 +101,7 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
 
 <div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.3 (Product Rule)</span>
+  For a product, each factor is differentiated in turn, with the other held fixed.
 
   $$
   \begin{equation}
@@ -98,6 +113,7 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
 
 <div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.4 (Quotient Rule)</span>
+  A special case of the product rule applied to $f(x) \cdot g(x)^{-1}$.
 
   $$
   \begin{equation}
@@ -109,11 +125,11 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
 
 <div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.5 (Chain Rule)</span>
-  If $h(x) = f(g(x))$,
+  For a composition, multiply the outer function's derivative by the inner function's derivative — rates of change compound.
 
   $$
   \begin{equation}
-  h'(x) = f'(g(x)) \, g'(x)
+  h'(x) = f'(g(x)) \, g'(x), \quad \text{where } h(x) = f(g(x))
   \label{eq:chain-rule}
   \end{equation}
   $$
@@ -123,17 +139,16 @@ The quotient in \eqref{eq:derivative-def} is the slope of the **secant line** th
 
 <div class="theorem-box" markdown="1">
   <span class="box-title">Theorem 1.6 (Power Rule)</span>
-  For $f(x) = x^n$, $n \in \mathbb{R}$,
 
   $$
   \begin{equation}
-  f'(x) = n x^{n-1}
+  f'(x) = n x^{n-1}, \quad f(x) = x^n,\ n \in \mathbb{R}
   \label{eq:power-rule}
   \end{equation}
   $$
 </div>
 
-The following standard results follow from first principles or the rules above, and are used freely throughout subsequent lessons:
+The results below follow from first principles or the rules above, and cover the functions you'll differentiate most often:
 
 | $f(x)$ | $f'(x)$ |
 |---|---|
