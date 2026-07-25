@@ -24,6 +24,15 @@ details.dropdown-box {
   border-radius: $border-radius;
   margin: 1em 0;
   padding: 0.5em 1em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  mjx-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    display: block !important;
+  }
 }
 
 details.dropdown-box summary {
