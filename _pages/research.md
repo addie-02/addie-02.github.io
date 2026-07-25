@@ -39,8 +39,6 @@ permalink: /research/
   </div>
 </div>
 
-
-
 ## Papers
 ---
 
