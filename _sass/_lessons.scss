@@ -6,11 +6,14 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
 
+  /* Only constrain DISPLAY-mode equations (block-level, e.g. $$...$$).
+     Inline math (e.g. $x$) uses the same mjx-container element but
+     must stay inline, or text wrapping breaks apart mid-sentence. */
   mjx-container[display="true"] {
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 100%;
-}
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+  }
 
   table {
     display: block;
@@ -38,35 +41,6 @@
   font-weight: 600;
   display: block;
   margin-bottom: 0.5em;
-}
-
-.figure-with-text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5em;
-  margin: 1.5em 0;
-
-  img {
-    flex: 0 0 60%;
-    max-width: 60%;
-    border-radius: $border-radius;
-    display: block;
-  }
-
-  .figure-explanation {
-    flex: 1 1 auto;
-  }
-
-  @include breakpoint(max-width $medium) {
-    flex-direction: column;
-    align-items: stretch;
-
-    img {
-      flex: 0 0 auto;
-      max-width: 100%;
-    }
-  }
 }
 
 /* ==========================================================================
@@ -130,5 +104,38 @@ details.dropdown-box[open] summary {
 
   h3 {
     margin-top: 0;
+  }
+}
+
+/* ==========================================================================
+   LESSON FIGURES (smaller image + explanation text side-by-side)
+   ========================================================================== */
+
+.figure-with-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5em;
+  margin: 1.5em 0;
+
+  img {
+    flex: 0 0 35%;
+    max-width: 35%;
+    border-radius: $border-radius;
+    display: block;
+  }
+
+  .figure-explanation {
+    flex: 1 1 auto;
+  }
+
+  @include breakpoint(max-width $medium) {
+    flex-direction: column;
+    align-items: stretch;
+
+    img {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
   }
 }
